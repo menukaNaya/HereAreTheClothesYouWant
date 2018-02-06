@@ -15,5 +15,11 @@ namespace HereAreTheClothesYouWant.Controllers
         {
             return View();
         }
+
+        public IActionResult Products()
+        {
+            ViewBag.Title = "Our Products";
+            return View();
+        }
     }
 }
