@@ -3,12 +3,24 @@
 }
 
 .inputWidth {
-    width: 300px;
+    width: 345px;
+    margin-left:20px;
 }
 
+.ciCo {
+    margin-left: 15px;
+    width: 730px;
+}
+.submit {
+    margin-left: 20px;
+}
 .my-input {
-    width: 300px;
-    margin: 0 auto;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 750px;
+    margin-left:5px;
+    /*margin: 0 auto;*/
 }
 
 ul.product-details {

@@ -1,0 +1,68 @@
+﻿@model SignupViewModel
+@section scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+<div>
+
+    <h2>@ViewBag.Title</h2>
+
+    <form class="usr-input" method="post">
+
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="row my-input ">
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" placeholder="First name" asp-for="FirstName">
+                <span asp-validation-for="FirstName"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" placeholder="Last name" asp-for="LastName">
+                <span asp-validation-for="LastName"></span>
+            </div>
+        </div>
+
+        <div class="form-group  inputWidth">
+            <label for="inputAddress" asp-for="Address">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="NO.0000,Address01,Adrress02." asp-for="Address">
+            <span asp-validation-for="Address"></span>
+        </div>
+        <div class="form-row ciCo">
+
+            <div class="form-group col-md-6">
+                <label for="inputCity" asp-for="City">City</label>
+                <input type="text" class="form-control" id="inputCity" asp-for="City">
+                <span asp-validation-for="City"></span>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="inputState" asp-for="Country">Country</label>
+                <select id="inputState" class="form-control" asp-for="Country">
+                    <option selected>Choose...</option>
+                    <option>Sri Lanka</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-2">
+                <label asp-for="ZipCode">Zip</label>
+                <input type="text" class="form-control" placeholder="" asp-for="ZipCode">
+                <span asp-validation-for="ZipCode"></span>
+            </div>
+
+        </div>
+
+        <div class="row my-input">
+            <div class="form-group col-md-6">
+                <input type="email" class="form-control" placeholder="Email" asp-for="Email">
+                <span asp-validation-for="Email"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="password" class="form-control" placeholder="Password" asp-for="Password">
+            </div>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary submit">Sign in</button>
+
+    </form>
+
+</div>
